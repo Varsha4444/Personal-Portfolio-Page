@@ -1,0 +1,291 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome-section">
+        <div class="welcome-content">
+            <h1>Hello, I'm Jane Doe</h1>
+            <p>Front-end Developer & UI Designer</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-tile">
+                <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank">
+                    <img src="https://via.placeholder.com/400x300?text=Tribute+Page" alt="Tribute Page Project">
+                    <p>Tribute Page</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank">
+                    <img src="https://via.placeholder.com/400x300?text=Survey+Form" alt="Survey Form Project">
+                    <p>Survey Form</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank">
+                    <img src="https://via.placeholder.com/400x300?text=Product+Landing" alt="Product Landing Project">
+                    <p>Product Landing</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank">
+                    <img src="https://via.placeholder.com/400x300?text=Technical+Docs" alt="Technical Docs Project">
+                    <p>Technical Docs</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's work together...</h2>
+        <div class="contact-links">
+            <a href="https://github.com/yourusername" id="profile-link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="mailto:your@email.com">
+                <i class="fas fa-at"></i> Email
+            </a>
+            <a href="tel:+1234567890">
+                <i class="fas fa-mobile-alt"></i> Call me
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Jane Doe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+#navbar li {
+    margin-left: 2rem;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+#navbar a:hover {
+    color: #4CAF50;
+}
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    text-align: center;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.welcome-content p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+#projects {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-tile:hover {
+    transform: translateY(-10px);
+}
+
+.project-tile img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-tile p {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contact {
+    padding: 6rem 2rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-links i {
+    margin-right: 0.5rem;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    #navbar ul {
+        justify-content: center;
+    }
+
+    #navbar li {
+        margin: 0 1rem;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-content p {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar li {
+        margin: 0.5rem 0;
+    }
+
+    .welcome-content h1 {
+        font-size: 2rem;
+    }
+}
+
+** end of styles.css **
+
